@@ -38,8 +38,9 @@
                 "support"
               ]
             },
-            "alice": {
+            "admin": {
               "roles": [
+                "admin",
                 "support"
               ]
             },

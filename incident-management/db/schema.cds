@@ -68,3 +68,19 @@ entity Urgency : CodeList {
 
 type EMailAddress : String;
 type PhoneNumber  : String;
+
+entity CustomersView(p1 : String)  as
+    select from Customers {
+        ID    : String,
+        name  : String,
+        email : String
+    }
+    where
+        ID = :p1;
+
+entity IncidentsView(sts : String) as
+    select from Incidents {
+        *
+    }
+    where
+        status.code = :sts;

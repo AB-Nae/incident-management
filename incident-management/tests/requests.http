@@ -1,0 +1,27 @@
+### GET Incidents
+GET http://localhost:4004/odata/v4/processor/Incidents
+authorization: Basic YWRtaW46YWRtaW4=
+
+### GET Customers
+GET http://localhost:4004/odata/v4/processor/Customers
+authorization: Basic YWRtaW46YWRtaW4=
+
+### GET Customers
+GET http://localhost:4004/odata/v4/admin/Customers
+authorization: Basic YWRtaW46YWRtaW4=
+
+### GET Customers View 
+GET http://localhost:4004/odata/v4/view/UsingView('1004155')/Set
+authorization: Basic YWRtaW46YWRtaW4=
+
+### GET Customers View2
+GET http://localhost:4004/odata/v4/view/UsingView2('1004155')/Set
+authorization: Basic YWRtaW46YWRtaW4=
+
+### GET Incidents View3
+GET http://localhost:4004/odata/v4/view/UsingView3('N')/Set
+authorization: Basic YWRtaW46YWRtaW4=
+
+### GET Incidents View4
+GET http://localhost:4004/odata/v4/view/UsingView4('N')/Set
+authorization: Basic YWRtaW46YWRtaW4=

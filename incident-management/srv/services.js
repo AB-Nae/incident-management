@@ -27,4 +27,24 @@ class ProcessorService extends cds.ApplicationService {
             return req.reject(`Can't modify a closed incident`)
     }
 }
-module.exports = { ProcessorService }
+
+class ViewService extends cds.ApplicationService {
+    /** Registering custom event handlers */
+    init() {
+        this.before("GET", "UsingView", (req) => this.fetchView(req.params));
+        
+        return super.init();
+    }
+
+    async fetchView(params) {
+        let p1 = params[0].p1;
+        const query = SELECT.from({ ref: [{ id: 'ViewService_UsingView', args: { p1: { val: p1 }}} ]} );
+        console.log("query:", query);
+        const db = await cds.connect.to('db');
+        const result = await db.run(query);
+        console.log("result:", result);
+    }
+}
+
+
+module.exports = { ProcessorService, ViewService }

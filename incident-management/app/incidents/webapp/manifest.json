@@ -63,7 +63,8 @@
       "libs": {
         "sap.m": {},
         "sap.ui.core": {},
-        "sap.fe.templates": {}
+        "sap.fe.templates": {},
+        "sap.fe.macros": {}
       }
     },
     "contentDensities": {
@@ -143,12 +144,16 @@
             "settings": {
               "editableHeaderContent": false,
               "contextPath": "/Incidents",
-              "controlConfiguration": {
-                "conversation/@com.sap.vocabularies.UI.v1.LineItem#i18nConversation": {
-                  "tableSettings": {
-                    "type": "ResponsiveTable",
-                    "creationMode": {
-                      "name": "Inline"
+              "content": {
+                "body": {
+                  "sections": {
+                    "Custom": {
+                      "template": "ns.incidents.ext.fragment.Custom",
+                      "position": {
+                        "placement": "After",
+                        "anchor": "i18nOverview"
+                      },
+                      "title": "{i18n>custom}"
                     }
                   }
                 }

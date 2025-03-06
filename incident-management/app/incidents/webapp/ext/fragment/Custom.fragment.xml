@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:macros="sap.fe.macros" xmlns:mvc="sap.ui.core.mvc">
+    <VBox core:require="{ handler: 'ns/incidents/ext/fragment/Custom'}">
+        <!-- <macros:Table id="Table" metaPath="/Customers/@com.sap.vocabularies.UI.v1.LineItem#tableMacro" header="{i18n&gt;customTable}"/> -->
+        <macros:Table id="Table1" metaPath="conversation/@com.sap.vocabularies.UI.v1.LineItem#tableMacro1" header="Custom Table"/>
+    </VBox>
+</core:FragmentDefinition>
